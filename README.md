@@ -1,32 +1,88 @@
 # PrivacysClub
-这里是`猪哥粉丝协会`，由支持猪哥的人组成，我们一直不离不弃、永远支持你
+受到[Kallydev](https://github.com/kallydev/privacy)启发，结合[vant UI](https://youzan.github.io/vant/#/zh-CN/)，设计了个人隐私泄露检测项目UI界面，不提供数据和接口，有兴趣的自己可以部署在内网进行研究，用于hvv黑客溯源等专业领域场景。
 
-## 几句心里话
-知道猪哥维护的费心，基本上大家找他买东西他都会说“白嫖不香吗？”<br />
-除了网安，他最在乎的就是自己做的[FancyPig博客](https://www.iculture.cc)<br />
-不忙的时候免费在群里教技术，好心分享的资料还被坏人恶意传播<br />
-甚至免费的东西被二道贩子跑到朋友圈卖几百块钱<br />
-再次恳请大家不要拿猪哥分享的资料去做违法的事情<br />
+## 界面展示
 
-## 说明
-这里提供一个简单打包好的版本，直接复制到服务器根目录即可使用
+![image-20211115112631071](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115112631071.png)
 
-## 演示
-演示站：https://bigmac.privacys.club
 
-## 修改说明
-### 网站标题修改
-在`index.html`文件的第1行
+
+
+
+## 源码部署
+
+首先需要安装Node，建议使用[LTS稳定版本](https://npm.taobao.org/mirrors/node/v14.18.1/node-v14.18.1-x64.msi)。
+
+然后，在vscode的终端运行下面命令，下载npm组件。
+
 ```
-<title>猪头汉堡店-FancyPig's blog</title>
+npm install
 ```
-### 顶部标题修改
-在`app.3b0fd6e1.js`文件中
+
+然后可以使用以下命令，进行本地测试。
+
 ```
-[t._v("猪头汉堡店-FancyPig")])
+npm run serve
 ```
-### 弹窗提示修改
-在`app.3b0fd6e1.js`文件中
+
+![image-20211115113124750](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115113056568.png)
+
+测试完成后，便可以进行打包。
+
 ```
-.alert({title:"提示",message:"欢迎来到猪头汉堡店(粉丝捐赠版)"
+npm run build
 ```
+
+
+
+![image-20211115113214736](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115113214736.png)
+
+打包完成后在`dist`目录中，可以看到项目打包好的版本。上传到web服务器便可以访问。
+
+![image-20211115113359943](C:\Users\66396\AppData\Roaming\Typora\typora-user-images\image-20211115113359943.png)
+
+## 常见问题
+
+### 如何修改代码中的接口？
+
+在`src/request/api.js`文件中，第二行需要设置接口网址。
+
+```
+let instance = axios.create({
+    baseURL: 'https://www.privacys.club/api',
+    headers: {
+        'content-type': 'application/json; charset=utf-8'
+    }
+})
+```
+
+然后在`src/components`相应的`.vue`文件中，需要修改对应的文件路径。
+
+### 有没有相关接口/数据分享？
+
+建议自行Google搜索`Q绑`、`8eqq`、`微博5e`等关键词，理论上可以搜索到。
+
+### 我被人骗了，能不能告诉我在哪里可以查询？
+
+FancyPig博主在社工篇`TOP1`中有专门的讲解，可以参考[2021史上最全的社工思路分享](https://www.iculture.cc/sg/pig=1034)
+
+当然，如果你有一定的技术基础，我们推荐使用Telegram免费的社工机器人（需要先[科学上网](https://hello-shudong.com/auth/register?code=ekmH)哦）
+
+访问链接https://t.me/FreeSGKbot?start=SGKXHWBAQS
+
+在hvv溯源场景中，我们通常会使用到以下场景
+
+- 社交平台绑定QQ、贴吧、手机号查询
+- 企业邮箱账户密码
+- 使用相同密码的人查询
+
+## 相关法律声明
+
+本项目仅提供漂亮的UI界面，由此界面可以衍生出很多其他的项目，比方说
+
+- 学生成绩系统查询
+- 域名/代理授权查询系统
+- 疑似诈骗QQ/手机查询
+
+本界面不承担任何由界面可能带来的法律风险，使用本代码代表你认同并愿意承担由此带来的一切法律风险。
+
