@@ -3,7 +3,7 @@
 
 ## 界面展示
 
-![image-20211115112631071](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115112631071.png)
+![1](https://github.com/B1gM8c/PrivacysClub/blob/main/img/image-20211115112631071.png?raw=true)
 
 
 
@@ -25,7 +25,7 @@ npm install
 npm run serve
 ```
 
-![image-20211115113124750](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115113056568.png)
+![image-20211115113124750](https://github.com/B1gM8c/PrivacysClub/blob/main/img/image-20211115113056568.png?raw=true)
 
 测试完成后，便可以进行打包。
 
@@ -35,11 +35,11 @@ npm run build
 
 
 
-![image-20211115113214736](C:\Users\66396\Documents\GitHub\PrivacysClub\img\image-20211115113214736.png)
+![image-20211115113214736](https://github.com/B1gM8c/PrivacysClub/blob/main/img/image-20211115113214736.png?raw=true)
 
 打包完成后在`dist`目录中，可以看到项目打包好的版本。上传到web服务器便可以访问。
 
-![image-20211115113359943](C:\Users\66396\AppData\Roaming\Typora\typora-user-images\image-20211115113359943.png)
+![image-20211115113359943](https://github.com/B1gM8c/PrivacysClub/blob/main/img/image-20211115113359943.png?raw=true)
 
 ## 常见问题
 
