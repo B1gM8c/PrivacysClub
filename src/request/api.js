@@ -2,7 +2,7 @@ import axios from 'axios'  //引入axios
 import { Toast } from 'vant'
 
 let instance = axios.create({
-    baseURL: 'https://sgk.iculture.cc',
+    baseURL: 'https://www.privacys.club/api',
     headers: {
         'content-type': 'application/json; charset=utf-8'
     }

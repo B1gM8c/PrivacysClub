@@ -68,7 +68,9 @@ FancyPig博主在社工篇`TOP1`中有专门的讲解，可以参考[2021史上�
 
 当然，如果你有一定的技术基础，我们推荐使用Telegram免费的社工机器人（需要先[科学上网](https://hello-shudong.com/auth/register?code=ekmH)哦）
 
-访问链接https://t.me/FreeSGKbot?start=SGKXHWBAQS
+访问链接https://www.privacys.club/
+
+里面提供了一些隐私查询的方法
 
 在hvv溯源场景中，我们通常会使用到以下场景
 
